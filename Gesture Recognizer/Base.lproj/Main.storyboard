@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gesture_Recognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="rrs-xO-uzK">
+                                <rect key="frame" x="103" y="108" width="168" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wQ1-qg-U5i" appends="YES" id="bfM-2t-xIu"/>
+                                    <outletCollection property="gestureRecognizers" destination="djE-te-GiJ" appends="YES" id="4zC-8e-T3Q"/>
+                                    <outletCollection property="gestureRecognizers" destination="iq1-ec-qfM" appends="YES" id="5s7-D4-iqx"/>
+                                    <outletCollection property="gestureRecognizers" destination="2Cm-L7-dKx" appends="YES" id="Iw9-Qm-9CQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="UxR-Gv-F5v" appends="YES" id="3tU-Z2-hPT"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="wOr-o3-ESQ">
+                                <rect key="frame" x="67" y="391" width="245" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CqE-r2-4Su" appends="YES" id="CS1-5R-pAy"/>
+                                    <outletCollection property="gestureRecognizers" destination="gw2-VZ-kUv" appends="YES" id="ejz-8i-EsH"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="rrs-xO-uzK" id="9RC-mD-pae"/>
+                        <outlet property="secondImageView" destination="wOr-o3-ESQ" id="bP6-jx-OMP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="wQ1-qg-U5i">
+                    <connections>
+                        <action selector="panGestureWithRecognizer:" destination="BYZ-38-t0r" id="6H1-hJ-oCP"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="djE-te-GiJ">
+                    <connections>
+                        <action selector="tapGestureWithRecognizer:" destination="BYZ-38-t0r" id="tmC-de-gOu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <rotationGestureRecognizer id="iq1-ec-qfM">
+                    <connections>
+                        <action selector="rotateGestureWithRecognizer:" destination="BYZ-38-t0r" id="m83-Rx-cYT"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="2Cm-L7-dKx">
+                    <connections>
+                        <action selector="pinchGestureWithRecognizer:" destination="BYZ-38-t0r" id="1NK-mH-PlC"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="UxR-Gv-F5v">
+                    <connections>
+                        <action selector="longPressGestureWithRecognizer:" destination="BYZ-38-t0r" id="mVN-bH-73W"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="CqE-r2-4Su">
+                    <connections>
+                        <action selector="swipeGestureWithRecognizer:" destination="BYZ-38-t0r" id="o2s-4s-5AV"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="gw2-VZ-kUv">
+                    <connections>
+                        <action selector="swipeGestureWithRecognizer:" destination="BYZ-38-t0r" id="KFU-KH-Ixc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chicken" width="96" height="96"/>
+    </resources>
+</document>
